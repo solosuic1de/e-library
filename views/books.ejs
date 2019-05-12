@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ua">
+<%- include ./partial/head.ejs%>
+<body>
+<header>
+    <%-include ./partial/nav.ejs %>
+    <div class="card card-image" style="background-image: url(/images/book-background.jpg);">
+        <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+            <div class="py-5">
+
+                <!-- Content -->
+                <h5 class="h5 orange-text">E-library</h5>
+                <h2 class="card-title h2 my-4 py-2">Бронювання книги</h2>
+                <p class="mb-4 pb-2 px-md-5 mx-md-5">Ви можете взяти на прочитання любу вільну книгу. Будь ласка, зберігайте книги в гарному стані, та дотримуйтесь правил бібліотеки<br> Весь список правил можна прочитати натиснувши на кнопку нижче</p>
+                <a class="btn peach-gradient">Правила</a>
+
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container-fluid books">
+        <section>
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <a href="#">
+                        <div class="thumbnail" style="background-image: url(https://i1.sndcdn.com/artworks-000185987043-3zcnvp-t500x500.jpg)"><span class="bookTitle">
+                            Камінна душа
+                        </span>
+                            <span class="bookAuthor">Гнат Хоткевич</span>
+                            <p class="inActive"><span class="text"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(http://stc01.mir24.tv/media/images/original/original15339540.jpg)"><span class="bookTitle">
+                                11/22/63
+                            </span>
+                        <span class="bookAuthor">Стівен Кінг</span>
+                        <p class="inActive"><span class="text">Буде доступна: 21.04.2020</span>
+                        <p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(https://scontent-amt2-1.cdninstagram.com/vp/ec48f5a6dc1d5a95663da5c70e27a532/5D2771A7/t51.2885-15/sh0.08/e35/c193.0.694.694/s640x640/47693857_2532721260075394_3870623728614270492_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com)"><span class="bookTitle">
+                                Хрещення вогнем
+                        </span>
+                        <span class="bookAuthor">Анджей Сапковский</span>
+                        <p class="inActive"><span class="text"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(https://i.ibb.co/f1Qr00v/imgonline-com-ua-Black-White-V6-ZKRWf-VBk8.jpg)"><span class="bookTitle">
+                                Під куполом
+                            </span>
+                        <span class="bookAuthor">Стівен Кінг</span>
+                        <p class="inActive"><span class="text"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(https://i1.sndcdn.com/artworks-000185987043-3zcnvp-t500x500.jpg)"><span class="bookTitle">
+                                Камінна душа
+                            </span>
+                        <span class="bookAuthor">Гнат Хоткевич</span>
+                        <p class="inActive"><span class="text"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(http://stc01.mir24.tv/media/images/original/original15339540.jpg)"><span class="bookTitle">
+                                    11/22/63
+                                </span>
+                        <span class="bookAuthor">Стівен Кінг</span>
+                        <p class="inActive"><span class="text">Буде доступна: 21.04.2020</span>
+                        <p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(https://scontent-amt2-1.cdninstagram.com/vp/ec48f5a6dc1d5a95663da5c70e27a532/5D2771A7/t51.2885-15/sh0.08/e35/c193.0.694.694/s640x640/47693857_2532721260075394_3870623728614270492_n.jpg?_nc_ht=scontent-amt2-1.cdninstagram.com)"><span class="bookTitle">
+                                    Хрещення вогнем
+                            </span>
+                        <span class="bookAuthor">Анджей Сапковский</span>
+                        <p class="inActive"><span class="text"></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="dummy"></div>
+                    <div class="thumbnail" style="background-image: url(https://i.ibb.co/f1Qr00v/imgonline-com-ua-Black-White-V6-ZKRWf-VBk8.jpg)"><span class="bookTitle">
+                                    Під куполом
+                                </span>
+                        <span class="bookAuthor">Стівен Кінг</span>
+                        <p class="inActive"><span class="text"></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+</main>
+<%- include ./partial/footer.ejs%>
+<%- include ./partial/scripts.ejs%>
+</body>
+</html>

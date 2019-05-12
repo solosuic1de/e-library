@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ua">
+<%- include ./partial/head.ejs%>
+<body>
+<header>
+    <%-include ./partial/nav.ejs %>
+    <div class="card card-image" style="background-image: url(/images/contact-us.png);">
+        <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+            <div class="py-5">
+
+                <ul class="contact-icons text-center list-unstyled">
+                    <li>
+                        <i class="fa fa-map-marker fa-2x orange-text"></i>
+                        <p>Ковальський провулок, 5, Київ, 02000</p>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-phone fa-2x orange-text"></i>
+                        <p>+88005553555</p>
+                    </li>
+
+                    <li>
+                        <i class="fa fa-envelope fa-2x orange-text"></i>
+                        <p>solosuicide133@gmail.com</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</header>
+    <main>
+    <section class="section">
+        <div class="container-fluid mb-5">
+            <h2 class="font-weight-bold text-center h1 my-5">Зв'яжіться з нами</h2>
+            <!--Section description-->
+            <p class="text-center grey-text mb-5 mx-auto w-responsive">Якщо у Вас є питання чи пропозиції, звяжіться з нами через контактну фому наведену нижче. Ми відповімо вам найближчим часом</p>
+
+            <!--Grid row-->
+            <form>
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="contact-name" class="form-control">
+                            <label for="contact-name" class="">Ваше ім'я</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="contact-email" class="form-control">
+                            <label for="contact-email" class="">Електронна пошта</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <input type="text" id="contact-Subject" class="form-control">
+                            <label for="contact-Subject" class="">Тема</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="contact-message" class="md-textarea form-control" rows="3"></textarea>
+                            <label for="contact-message">Повідомлення</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+            </form>
+            <div class="text-center my-4">
+                <a class="btn peach-gradient">Відправити</a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="mdb-map">
+            <div id="map" class="z-depth-1-half map-container" style="height: 500px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5721813002688!2d30.447262215731403!3d50.44906897947518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc267daad9cd%3A0xf6951bfcb278b294!2z0JrQvtCy0LDQu9GM0YHRjNC60LjQuSDQv9GA0L7QstGD0LvQvtC6LCA1LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1557611861539!5m2!1suk!2sua"
+                                                                                              width="100%" height="100%"></iframe></div>
+        </div>
+    </section>
+</main>
+<%- include ./partial/footer.ejs%>
+<%- include ./partial/scripts.ejs%>
+</body>
+</html>
