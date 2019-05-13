@@ -86,7 +86,7 @@ body,
   position: absolute;
   top: 15px;
   bottom: 0;
-  transition: all 0.7s ease;
+  transition: all 0.4s ease-in-out;
   left: 15px;
   right: 0;
   text-align: center;
