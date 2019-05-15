@@ -14,7 +14,15 @@ module.exports = {
             res.redirect('/login');
         }
     },
+    isAuntificated: function (req, res, next) {
+        const user = firebase.auth().currentUser;
+        if (user !== null) {
+            req.user = user;
+            next();
+        }
+        next();
 
+    },
     registration: function (email, password) {
 
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
@@ -26,11 +34,10 @@ module.exports = {
         });
     },
     login: function (email, password) {
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            return errorCode.toString() + " " + errorMessage.toString();
-        });
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+    },
+    logout: function () {
+        return firebase.auth().signOut();
     }
 };
 

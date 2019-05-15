@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<%- include ./partial/head.ejs %>
+<body>
+<header>
+    <%- include ./partial/nav.ejs %>
+    <div class="card card-image img-fluid"
+         style="background-image:  url(<% if(HeaderImage){ %>  <%= HeaderImage %>  <% } else{ %>  https://coverfiles.alphacoders.com/377/37711.png  <% } %> );">
+        <div class="text-white text-center rgba-stylish-strong py-5">
+            <div class="py-5">
+                <h1 class="display-4"><%= Title %> </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col-8">
+
+                <ul class="list-unstyled">
+                    <li><img src="/images/star-icon.png" alt="rating icon"></i><span id="rating" class="badge badge-warning">
+                  <%= Rating %>/10</span></li>
+                    <li><span class="list">Автор:</span> <%= Author %>
+
+                    </li>
+                    <li><span class="list">Жанр:</span> <%= Genre %>
+
+                    </li>
+                    <li><span class="list">Рік:</span> <%= Year %>
+
+                    </li>
+                    <li><span class="list">Видавництво:</span> <%= Publisher %>
+
+                    </li>
+                </ul>
+                <hr>
+                <p> <%= Description %></p>
+                <form action="/deteBook" method="POST"><input name="id" type="hidden" value="{{id}}">
+                    <button type="button" class="btn btn-block blue-gradient waves-effect waves-light text-white" data-toggle="modal" data-target="#basicExampleModal">Забронювати цю книгу</button>
+                    <div class="modal fade-top" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ви дійсно хочете видалити цю книгу?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary  waves-effect" data-dismiss="modal">Відмінити</button>
+                                    <input type="submit" class="btn btn-outline-danger waves-effect" value="Підтвердити">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4"><img src=" <%= Image %>" alt="book poster" class="img-thumbnail img-fluid"></div>
+        </div>
+
+    </div>
+</main>
+<%- include ./partial/footer.ejs%>
+<%- include ./partial/scripts.ejs%>
+</body>
+</html>

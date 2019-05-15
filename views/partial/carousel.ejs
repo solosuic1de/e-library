@@ -23,12 +23,19 @@
                         <li>
                             <p class="font-weight-bold text-uppercase py-4">Зручна заміна класичної бібліотеки.</p>
                         </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="#" class="btn btn-unique btn-lg btn-rounded">Вхід в кабінет читача</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="#" class="btn btn-cyan btn-lg btn-rounded">Зареєструватися</a>
-                        </li>
+                        <% if(user){ %>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="/cabinet" class="btn btn-unique btn-lg btn-rounded">В кабінет читача</a>
+                            </li>
+                        <% } else{ %>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="/login" class="btn btn-unique btn-lg btn-rounded">Вхід</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a target="_blank" href="/register" class="btn btn-cyan btn-lg btn-rounded">Зареєструватися</a>
+                            </li>
+                        <% } %>
+
                     </ul>
                 </div>
             </div>

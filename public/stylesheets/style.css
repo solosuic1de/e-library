@@ -195,5 +195,24 @@ body,
 .btn-rounded {
   border-radius: 10em;
 }
+.opacity{
+  background-color: #6e655e;
+  opacity: 0.9;
+  border-radius: 5px;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 1);
+
+}
+.prettyLink{
+  text-decoration: none;
+  color: #34456a;
+}
+.prettyLink:hover{
+  color: #34456a;
+}
+.btn-sm-round
+{
+  border-radius: 5px;
+}
+
 
 

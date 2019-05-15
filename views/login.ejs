@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<%- include ./partial/head.ejs %>
+<body style="background-image: url(/images/book-background.jpg);">
+<header>
+    <%- include ./partial/nav.ejs %>
+
+</header>
+<div class="h-100 d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-lg-5">
+
+                <form class="text-center opacity p-5" action="/login" method="POST">
+
+                    <p class="h4 mb-4">Вхід</p>
+
+                    <input type="email" name="email" class="form-control mb-4" placeholder="E-mail">
+
+                    <input type="password" name="password" class="form-control mb-4"
+                           placeholder="Пароль">
+
+                    <div class="d-flex justify-content-around">
+
+
+                    </div>
+                    <input type="submit" class="btn btn-sm-round btn-info btn-block my-4" value="Вхід">
+
+
+                    <p>Не зараєстровані?
+                        <a class="prettyLink" href="/register">Реєстрація</a>
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
