@@ -1,10 +1,11 @@
 {
-  "apiKey": "AIzaSyBAKqwlDyO0SqCnWpFGbC-q4vwwecATUAE",
-  "authDomain": "epam-39dbe.firebaseapp.com",
-  "databaseURL": "https://epam-39dbe.firebaseio.com",
-  "projectId": "epam-39dbe",
-  "storageBucket": "epam-39dbe.appspot.com",
-  "messagingSenderId": "600583723959",
-  "appId": "1:600583723959:web:716e9989032fbe2a"
+  "apiKey": "",
+  "authDomain": "",
+  "databaseURL": "",
+  "projectId": "",
+  "storageBucket": "",
+  "messagingSenderId": "",
+  "appId": ""
 }
+
 
