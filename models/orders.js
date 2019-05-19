@@ -1,4 +1,6 @@
 const firebase = require('../firebase-midleware/firestorage');
+const uuidv4 = require('uuid/v4');
+
 
 function Order(end, start, userId, bookId, id) {
     this.end = end;
@@ -19,11 +21,21 @@ module.exports = {
     order: function (end, start, userId, bookId, id) {
         return new Order(end, start, userId, bookId, id);
     },
-    newOrder: function (userId, bookId) {
-        const start = new Date().toISOString();
-        return new Order(null, start, userId, bookId, null);
+    newOrder: function (userId, bookId, endDate, ) {
+        const start = new Date();
+       const order = {
+           "End": endDate,
+           "Start": start,
+           "UserId": userId,
+           "bookId": bookId
+       };
+        return  firebase.db.collection('Orders').doc(uuidv4()).set(order);
     },
-    setEndDate: function (order) {
-        order.end = new Date().toISOString();
+    setEndDate: function (orderId) {
+        let date = new Date();
+       return  firebase.db.collection("Orders").doc(orderId).update({
+            "End": date
+        });
+
     }
 };
