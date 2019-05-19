@@ -10,7 +10,7 @@ router.get('/', auth.protect, function (req, res) {
     bookModel.getAll().then((snapshot) => {
         snapshot.forEach((doc) => {
 
-            book = new bookModel.createBook(doc.get("Title"), doc.id, doc.get("Author"), doc.get("Description"), doc.get("Year"), doc.get("Genre"), doc.get("HeaderImage"), doc.get("Image"), doc.get("IsActive"), doc.get("Publisher"), doc.get("rating"));
+            book = new bookModel.book(doc.get("Title"), doc.id, doc.get("Author"), doc.get("Description"), doc.get("Year"), doc.get("Genre"), doc.get("HeaderImage"), doc.get("Image"), doc.get("IsActive"), doc.get("Publisher"), doc.get("rating"));
             books.push(book);
 
         });
@@ -31,7 +31,7 @@ router.get('/:id', auth.protect, function (req, res) {
             res.redirect("/");
         } else {
 
-            const book = new bookModel.createBook(doc.get("Title"), doc.id, doc.get("Author"), doc.get("Description"), doc.get("Year"), doc.get("Genre"), doc.get("HeaderImage"), doc.get("Image"), doc.get("IsActive"), doc.get("Publisher"), doc.get("rating"));
+            const book = new bookModel.book(doc.get("Title"), doc.id, doc.get("Author"), doc.get("Description"), doc.get("Year"), doc.get("Genre"), doc.get("HeaderImage"), doc.get("Image"), doc.get("IsActive"), doc.get("Publisher"), doc.get("rating"));
             res.render('book', {
                 title: book.title,
                 Title: book.title,

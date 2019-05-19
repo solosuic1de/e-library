@@ -24,7 +24,7 @@ module.exports = {
         return bookRef.get();
 
     },
-    createBook: function (title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating) {
+    book: function (title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating) {
         return new Book(title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating);
     },
     changeAviable: function (book) {
