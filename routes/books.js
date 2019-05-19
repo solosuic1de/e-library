@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const auth = require('../auth/auth');
+const auth = require('../firebase-midleware/auth');
 const bookModel = require('../models/books');
 // const config = require('/config/firebase-config');
 /* GET home page. */
@@ -43,7 +43,8 @@ router.get('/:id', auth.protect, function (req, res) {
                 HeaderImage: book.headerImage,
                 Image: book.image,
                 user: req.user,
-                Rating: book.rating
+                Rating: book.rating,
+                isAviable: false
             });
         }
     })

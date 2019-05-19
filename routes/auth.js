@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const auth = require('../auth/auth');
+const auth = require('../firebase-midleware/auth');
 // const config = require('/config/firebase-config');
 /* GET home page. */
 router.get('/login', function (req, res) {

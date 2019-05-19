@@ -1,10 +1,5 @@
-const admin = require('firebase-admin');
-const config = require('../config/firebase-storage-config');
+const firebase = require('../firebase-midleware/firestorage');
 
-admin.initializeApp({
-    credential: admin.credential.cert(config)
-});
-const db = admin.firestore();
 
 function Book(title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating) {
     this.title = title;
@@ -22,14 +17,22 @@ function Book(title, id, author, description, year, genre, headerImage, image, i
 
 module.exports = {
     getAll: function () {
-        return db.collection('Books').get();
+        return firebase.db.collection('Books').get();
     },
     getByid: function (id) {
-        let bookRef = db.collection('Books').doc(id);
+        let bookRef = firebase.db.collection('Books').doc(id);
         return bookRef.get();
 
     },
     createBook: function (title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating) {
         return new Book(title, id, author, description, year, genre, headerImage, image, isActive, publisher, rating);
-    }
+    },
+    changeAviable: function (book) {
+        if (book.isActive) {
+            book.isActive = false;
+        } else {
+            book.isActive = true;
+        }
+    },
+
 };

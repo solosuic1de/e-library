@@ -36,13 +36,18 @@
                 </ul>
                 <hr>
                 <p> <%= Description %></p>
-                <form action="/deteBook" method="POST"><input name="id" type="hidden" value="{{id}}">
+
+                <form action="/orderBook" method="POST"><input name="id" type="hidden" value="{{id}}">
                     <button type="button" class="btn btn-block blue-gradient waves-effect waves-light text-white" data-toggle="modal" data-target="#basicExampleModal">Забронювати цю книгу</button>
                     <div class="modal fade-top" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Ви дійсно хочете видалити цю книгу?</h5>
+                                    <% if(isAviable){ %>
+                                    <h5 class="modal-title" id="exampleModalLabel">Будь ластка, виберіть перід на який ви би хотіли забронювати книгу</h5>
+                                        <% } else{ %>
+                                            <h5 class="modal-title" id="exampleModalLabel">Книга буде доступна з </h5>
+                                        <% } %>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-secondary  waves-effect" data-dismiss="modal">Відмінити</button>
@@ -52,6 +57,7 @@
                         </div>
                     </div>
                 </form>
+
             </div>
             <div class="col-4"><img src=" <%= Image %>" alt="book poster" class="img-thumbnail img-fluid"></div>
         </div>

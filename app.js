@@ -7,8 +7,9 @@ let logger = require('morgan');
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
 let booksRouter = require('./routes/books');
-let contactRouter = require('./routes/contacts')
+let contactRouter = require('./routes/contacts');
 let authRouter = require('./routes/auth');
+let ordersRouter = require('./routes/orders');
 let app = express();
 
 // view engine setup
@@ -62,6 +63,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
+app.use('/orders', ordersRouter);
 app.use(authRouter);
 app.use(contactRouter);
 

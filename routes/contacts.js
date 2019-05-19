@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const auth = require('../auth/auth');
+const auth = require('../firebase-midleware/auth');
 /* GET home page. */
 router.get('/contacts', auth.isAuntificated, function (req, res) {
 
